@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-location',
@@ -9,18 +9,5 @@ import { Component } from '@angular/core';
 })
 
 export class LocationComponent {
-  x = document.getElementById("location");
-
-  getLocation() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(this.showPosition);
-    } else {
-      this.x.innerHTML = "Geolocation is not supported by this browser.";
-    }
-  }
-
-  showPosition(position: any) {
-    this.x.innerHTML = "Latitude: " + position.coords.latitude +
-    "<br>Longitude: " + position.coords.longitude;
-  }
+  
 }
