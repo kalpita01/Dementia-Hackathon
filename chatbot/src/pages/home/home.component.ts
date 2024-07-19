@@ -2,11 +2,14 @@ import { Component } from '@angular/core';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 // import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
+import { GamesComponent } from '../games/games.component';
+import { ImmersivereaderComponent } from '../immersivereader/immersivereader.component';
+import { LocationComponent } from '../location/location.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, GamesComponent, ImmersivereaderComponent, LocationComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
