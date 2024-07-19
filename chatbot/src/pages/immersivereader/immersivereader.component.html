@@ -1,21 +1,22 @@
-<div class="container mt-50 mb-50" style="text-align:center">
+<div id="immersive_reading" class="container mt-50 mb-50" style="text-align:center">
   <h1>
     Immersive Reading
   </h1>
 
   <div class="d-flex">
     <div class="link">
-      <div id="para-1" (click)="changePara(1)">Para 1</div>
-      <div id="para-2" (click)="changePara(2)">Para 2</div>
-      <div id="para-3" (click)="changePara(3)">Para 3</div>
-      <div id="para-4" (click)="changePara(4)">Para 4</div>
+      <div id="para-1" (click)="changePara(1)">Begin</div>
+      <div id="para-2" (click)="changePara(2)">Intermediate</div>
+      <div id="para-3" (click)="changePara(3)">Intermediate</div>
+      <div id="para-4" (click)="changePara(4)">End</div>
     </div>
     <div class="text">
-      <textarea id="communication" rows="5" cols="50" readonly></textarea>
+      <textarea id="communication" rows="5" cols="50" readonly data-id=""></textarea>
       <br>
       <button (click)="readTextAloud()">Read Aloud</button>
       <button (click)="stopReading()">Stop</button>
     </div>
+    <p id="selected-c"></p>
   </div>
   
 </div>
