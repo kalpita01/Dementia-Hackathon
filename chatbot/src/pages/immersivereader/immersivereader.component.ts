@@ -32,4 +32,30 @@ export class ImmersivereaderComponent {
     }
   }
 
+  stopReading(){
+    if(this.synth.speaking){
+      this.synth.cancel();
+    }
+  }
+  
+
+  changePara(id: Number): void {
+    let paragraphs = {
+      "1": "text1",
+      "2": "text2",
+      "3": "text3",
+      "4": "text4"
+    }
+  
+    if(id == 1){
+      document.getElementById("communication").innerHTML = paragraphs["1"];
+    }else if(id == 2){
+      document.getElementById("communication").innerHTML = paragraphs["2"];
+    }else if(id == 3){
+      document.getElementById("communication").innerHTML = paragraphs["3"];
+    }else if(id == 4){
+      document.getElementById("communication").innerHTML = paragraphs["4"];
+    }
+  }
+
 }
